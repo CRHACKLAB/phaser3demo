@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Room Change Example</title>
+    <script src="libs/phaser.js"></script> 
+    <style>
+        body {
+            background: #000000fa;
+        }
+        canvas {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0; }
+    </style>
+</head>
+<body>
+
+    <script src="game/gameConfig.js"></script>
+    <script src="game/Level.js"></script>
+    <script src="game/Player.js"></script>
+
+    <script>
+
+
+        class Game extends Phaser.Game {
+
+            /**
+             * Create the player.
+             * @param {object} config - Phaser game config.
+             */
+            constructor(config) {
+                super(config);
+                this.scene.add('level', Level, true);
+            }
+        }
+
+        // Start the game.
+        let game = new Game(config);
+
+    </script>
+
+</body>
+
+</html>
